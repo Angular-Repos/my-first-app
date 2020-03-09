@@ -1,6 +1,10 @@
 <div class="col-12">
   <label>Titulo persona</label>
-  <input type="text" class="form-control" (input)="onModificarPersona($event)">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="tituloPersona"
+    >
   <p>{{tituloPersona}}</p>
 
   <h1>Listado de personas</h1>
