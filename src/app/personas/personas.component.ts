@@ -9,6 +9,7 @@ export class PersonasComponent {
   agregarPersona = false;
   agregarPersonaStatus = 'No se ha agregado ninguna persona';
   tituloPersona = 'titulo';
+  personaCreada = false;
 
   constructor() {
     setTimeout(() => {
@@ -18,6 +19,7 @@ export class PersonasComponent {
 
   onCrearPersona() {
     this.agregarPersonaStatus = 'Persona agregada';
+    this.personaCreada = true;
   }
 
   onModificarPersona(event: Event) {
