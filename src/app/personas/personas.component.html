@@ -12,7 +12,10 @@
     (click)="onCrearPersona()">
     Agregar persona
   </button>
-  <p *ngIf="personaCreada">{{agregarPersonaStatus}} con título de {{tituloPersona}}</p>
+  <p *ngIf="personaCreada; else sinPersona">{{agregarPersonaStatus}} con título de {{tituloPersona}}</p>
+  <ng-template #sinPersona>
+    <p>No se ha agregado persona</p>
+  </ng-template>
   <app-persona></app-persona>
 </div>
 
